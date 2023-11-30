@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multipurpose Calculator</title>
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>    
+    <div class="container">
+        <h2>Calculator</h2>
+        <div class="calc-input">
+            <div id="inputBoxes"></div>
+                <button class="btn btn-outline-secondary" type="button" onclick="addInputBox()">Agregar número</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="removeInputBox()">Borrar número</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="calculateResult()">Calcular</button>    
+            </div>
+            <input id="display" class="form-control" rows="1" cols="15" readonly></input>
+            <div class="calc-buttons">
+                <button class="btn btn-outline-secondary" type="button" onclick="addToDisplay('/')">/</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="addToDisplay('*')">*</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="addToDisplay('-')">-</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="addToDisplay('+')">+</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="addToDisplay('Promedio')">Promedio</button>
+            </div>
+            <div class="calc-output">
+                <input id="output" class="form-control" rows="1" cols="70" readonly></input>
+        </div>
+    </div>
+</body>
+</html>
