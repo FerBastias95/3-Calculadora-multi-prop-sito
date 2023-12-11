@@ -1,8 +1,9 @@
 <head>
     <title>Promedio Ponderado</title>
-    <script src="/3-Calculadora-multi-prop-sito/script/promedio_ponderado.js"></script>
+    <script src="/script/promedio_ponderado.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
@@ -15,26 +16,71 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <!-- Brand/logo -->
-            <a class="navbar-brand" href="../index.html">Logo</a>
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/3-Calculadora-multi-prop-sito/links/calculadora.html">Calculadora Multifuncional</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/3-Calculadora-multi-prop-sito/links/promedio_ponderado.html">Promedio Ponderado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/3-Calculadora-multi-prop-sito/links/conversion_peso.html">Conversión Peso Chileno</a>
-                    </li>
-                </ul>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="calculadora.html">Calculadora</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="conversion_peso.html">Conversion Peso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="promedio_ponderado.html">Promedio Ponderado</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
-    <h1>¡En construcción!</h3>
+    <div class="form-body">
+        <div class="form-holder1">
+            <div class="form-content">
+                <div class="form-items">
+                    <h1>Promedio Ponderado</h1>
+                    <div class="calc-input">
+                        <div class="form-items-nums">
+                            <div id="inputBoxes" class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>Notas</h3>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Ponderaciones</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn-group" role="group">
+                            <div class="buttonRow">
+                                <button class="btn btn-success rounded mb-2 mt-2 m-2" type="button"
+                                    onclick="addInputBoxes()">Agregar nota</button>
+                            </div>
+                            <div class="buttonRow">
+                                <button class="btn btn-danger rounded mb-2 mt-2" type="button"
+                                    onclick="removeInputBoxes()">Borrar nota</button>
+                            </div>
+                        </div>
+
+                        <div class="calc-output">
+                            <input id="output" class="form-control mt-2" rows="1" cols="70" readonly
+                                placeholder="Resultado"></input>
+                        </div>
+
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-primary mt-3" type="button" onclick="calculateResult()">Calcular Promedio</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>

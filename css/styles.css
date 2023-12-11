@@ -12,7 +12,7 @@ body {
 html,
 body {
   height: 100%;
-  background-color: #152733;
+  background-color: #4994c5;
   overflow: hidden;
 }
 
@@ -63,7 +63,8 @@ body {
 
 .form-items-nums {
   border: 3px solid #881ec9;
-  padding: 20px;
+  padding: 10px;
+  margin-bottom:20px;
   display: inline-block;
   width: 100%;
   margin-bottom: auto;
@@ -113,25 +114,6 @@ body {
   color: #fff;
 }
 
-.form-content input[type=text],
-.form-content input[type=password],
-.form-content input[type=email],
-.form-content select {
-  width: 100%;
-  padding: 9px 20px;
-  text-align: left;
-  border: 0;
-  outline: 0;
-  border-radius: 6px;
-  background-color: #fff;
-  font-size: 15px;
-  font-weight: 300;
-  color: #8D8D8D;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  margin-top: 16px;
-}
-
 .btn-primary {
   background-color: #6C757D;
   outline: none;
@@ -148,32 +130,6 @@ body {
   box-shadow: none;
 }
 
-.form-content textarea {
-  position: static !important;
-  width: 100%;
-  padding: 8px 20px;
-  border-radius: 6px;
-  text-align: left;
-  background-color: #fff;
-  border: 0;
-  font-size: 15px;
-  font-weight: 300;
-  color: #8D8D8D;
-  outline: none;
-  resize: none;
-  height: 120px;
-  -webkit-transition: none;
-  transition: none;
-  margin-bottom: 14px;
-}
-
-.form-content textarea:hover,
-.form-content textarea:focus {
-  border: 0;
-  background-color: #ebeff8;
-  color: #8D8D8D;
-}
-
 .mv-up {
   margin-top: -9px !important;
   margin-bottom: 8px !important;
@@ -187,7 +143,16 @@ body {
   color: #2acc80;
 }
 
-.btn-group{
-  margin-top: 2%;
-  margin-bottom: 2%;
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container input {
+  /* Adjust input styles here */
+  margin-right: 5px; /* Adjust spacing between inputs */
+}
+
+.row {
+  margin:10px;
 }

@@ -6,7 +6,7 @@ function addInputBox() {
     var inputBoxes = document.getElementById('inputBoxes');
     var inputBox = document.createElement('input');
     inputBox.type = 'text';
-    inputBox.className = 'form-control';
+    inputBox.className = 'form-control mb-2 mt-2 col-md-6';
     inputBoxes.appendChild(inputBox);
 }
 

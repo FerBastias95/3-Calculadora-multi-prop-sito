@@ -1,9 +1,9 @@
 <head>
     <title>Promedio Ponderado</title>
-    <script src="/3-Calculadora-multi-prop-sito/script/calculator.js"></script>
+    <script src="/script/calculator.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
@@ -15,22 +15,24 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <!-- Brand/logo -->
-            <a class="navbar-brand" href="../index.html">Logo</a>
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/3-Calculadora-multi-prop-sito/links/calculadora.html">Calculadora Multifuncional</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/3-Calculadora-multi-prop-sito/links/promedio_ponderado.html">Promedio Ponderado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/3-Calculadora-multi-prop-sito/links/conversion_peso.html">Conversión Peso Chileno</a>
-                    </li>
-                </ul>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="calculadora.html">Calculadora</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="conversion_peso.html">Conversion Peso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="promedio_ponderado.html">Promedio Ponderado</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -41,36 +43,41 @@
                 <div class="form-items">
                     <h1>Calculadora</h1>
                     <div class="calc-input">
-                        <div class="form-items-nums">
-                            <h2>Estos son sus números</h2>
+                        <div class="form-items-nums col-md-6 m-2">
+                            <h3>Estos son sus números</h3>
                             <div id="inputBoxes"></div>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button class="btn btn-success" type="button" onclick="addInputBox()">Agregar
-                                número</button>
-                            <button class="btn btn-danger" type="button" onclick="removeInputBox()">Borrar
-                                número</button>
+                            <div class="btn-group mt-2 mb-2" role="group">
+                                <button class="btn btn-success" type="button" onclick="addInputBox()">Agregar
+                                    número</button>
+                                <button class="btn btn-danger" type="button" onclick="removeInputBox()">Borrar
+                                    número</button>
+                            </div>
                         </div>
 
-                        <input id="display" class="form-control" rows="1" cols="15" readonly
-                            placeholder="Operador"></input>
-                        <div class="btn-group">
-                            <button class="btn btn-success" type="button" onclick="addToDisplay('+')">+</button>
-                            <button class="btn btn-info" type="button" onclick="addToDisplay('-')">-</button>
-                            <button class="btn btn-danger" type="button" onclick="addToDisplay('*')">*</button>
-                            <button class="btn btn-warning" type="button" onclick="addToDisplay('/')">/</button>
-                            <button class="btn btn-secondary" type="button"
-                                onclick="addToDisplay('Promedio')">Promedio</button>
+                        <div class="operadores d-flex justify-content-left m-3">
+                            <input id="display" class="form-control col-md-3 " readonly placeholder="Operador"></input>
+                            <div class="btn-group ml-3">
+                                <button class="btn btn-success" type="button" onclick="addToDisplay('+')">+</button>
+                                <button class="btn btn-info" type="button" onclick="addToDisplay('-')">-</button>
+                                <button class="btn btn-danger" type="button" onclick="addToDisplay('*')">*</button>
+                                <button class="btn btn-warning" type="button" onclick="addToDisplay('/')">/</button>
+                                <button class="btn btn-secondary" type="button" onclick="addToDisplay('Promedio')">Promedio</button>
+                            </div>
                         </div>
+                        
+                        <div class="resultados d-flex justify-content-center m-2">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    onclick="calculateResult()">Calcular</button>
+                            </div>
+                        </div>
+
+                            
                         <div class="calc-output">
-                            <input id="output" class="form-control" rows="1" cols="70" readonly
+                            <input id="output" class="form-control m-2" rows="1" cols="70" readonly
                                 placeholder="Resultado"></input>
                         </div>
-                        <div class="btn-group" role="group">
-                            <button class="btn btn-outline-secondary" type="button"
-                                onclick="calculateResult()">Calcular</button>
-                        </div>
-
+                        
                     </div>
                 </div>
             </div>
