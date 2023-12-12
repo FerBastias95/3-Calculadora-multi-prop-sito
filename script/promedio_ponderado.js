@@ -67,6 +67,6 @@ function calculateResult() {
     }
     if(sumaPonderacion == 100){
         output.value = result/100;
-    } else output.value = "Ponderación no es igual al 100%";
+    } else output.value = "La suma de la ponderación no es igual al 100%";
     
 }
