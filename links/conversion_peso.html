@@ -37,37 +37,40 @@
         </nav>
     </header>
 
-    <div class="form-body">
-        <div class="form-holder2">
-            <div class="form-content">
-                <div class="form-items">
-                    <h2>Convertir de USD a CLP</h2>
-                    <input id="inputUSD" type="number" class="form-control" rows="1" cols="70"></input>
-                    <div class="btn-group">
-                        <button id="convertButtonUSDtoCLP" class="btn btn-outline-secondary m-2" type="button"
-                        onclick="UsdToClp()">Convertir USD a CLP</button>
+    <div class="content">
+        <div class="form-body">
+            <div class="form-holder2">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h2>Convertir de USD a CLP</h2>
+                        <input id="inputUSD" type="number" class="form-control" rows="1" cols="70"></input>
+                        <div class="btn-group">
+                            <button id="convertButtonUSDtoCLP" class="btn btn-outline-secondary m-2" type="button"
+                            onclick="UsdToClp()">Convertir USD a CLP</button>
+                        </div>
+                        <input id="outputCLP" class="form-control" rows="1" cols="70" readonly></input>
+                        <p id="conversionRateUSDtoCLP"></p>
+                        <p id="displayConversionRateUSDtoCLP"></p>
                     </div>
-                    <input id="outputCLP" class="form-control" rows="1" cols="70" readonly></input>
-                    <p id="conversionRateUSDtoCLP"></p>
-                    <p id="displayConversionRateUSDtoCLP"></p>
                 </div>
-            </div>
-
-            <div class="form-content">
-                <div class="form-items">
-                    <h2>Convertir de CLP a USD</h2>
-                    <input id="inputCLP" type="number" class="form-control" rows="1" cols="70"></input>
-                    <div class="btn-group">
-                        <button id="convertButtonCLPtoUSD" class="btn btn-outline-secondary m-2" type="button"
-                        onclick="clpToUsd()">Convertir CLP a USD</button>
+    
+                <div class="form-content">
+                    <div class="form-items">
+                        <h2>Convertir de CLP a USD</h2>
+                        <input id="inputCLP" type="number" class="form-control" rows="1" cols="70"></input>
+                        <div class="btn-group">
+                            <button id="convertButtonCLPtoUSD" class="btn btn-outline-secondary m-2" type="button"
+                            onclick="clpToUsd()">Convertir CLP a USD</button>
+                        </div>
+                        <input id="outputUSD" class="form-control" rows="1" cols="70" readonly></input>
+                        <p id="conversionRateCLPtoUSD"></p>
+                        <p id="displayConversionRateCLPtoUSD"></p>
                     </div>
-                    <input id="outputUSD" class="form-control" rows="1" cols="70" readonly></input>
-                    <p id="conversionRateCLPtoUSD"></p>
-                    <p id="displayConversionRateCLPtoUSD"></p>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <script>
         document.getElementById('convertButtonUSDtoCLP').addEventListener('click', getConversionRateUSDtoCLP);
