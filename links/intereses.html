@@ -61,14 +61,14 @@
                             <input type="number" class="col-md-6" id="inputTiempoSimple">
                         </div>
 
-                        <div class="btn-group">
-                            <button id="convertButtonUSDtoCLP" class="btn btn-outline-secondary m-2" type="button"
-                            onclick="UsdToClp()">Convertir USD a CLP</button>
+                        <div class="btn-group col-md-12">
+                            <button id="simpleInterest" class="btn btn-outline-secondary m-2" type="button"
+                            onclick="simpleInterest()">Calcular</button>
                         </div>
 
                         <div class="row">
                             <h4>Capital Final:</h4>
-                            <input id="outputCapitalSimple" type="number" class="form-control col-md-9"></input>   
+                            <input id="outputCapitalSimple" type="number" class="form-control col-md-9" readonly></input>   
                         </div>
 
                     </div>
@@ -76,25 +76,40 @@
     
                 <div class="form-content">
                     <div class="form-items">
+                        <h2>Interés Compuesto</h2>
                         <div class="row">
                             <h4>Capital Inicial:</h4>
-                            <input id="inputCapital" type="number" class="form-control col-md-9"></input>   
+                            <input id="inputCapitalCompuesto" type="number" class="form-control col-md-9"></input>   
                         </div>
-                        
-                        <div class="btn-group">
-                            <button id="convertButtonUSDtoCLP" class="btn btn-outline-secondary m-2" type="button"
-                            onclick="UsdToClp()">Convertir USD a CLP</button>
+
+                        <div class="row">
+                            <h4 class="col-md-6">Tasa Interés</h4>
+                            <input type="number" class="col-md-6" id="inputRateCompuesto">
                         </div>
-                        <input id="outputCLP" class="form-control" type="number" readonly></input>
+
+                        <div class="row">
+                            <h4 class="col-md-6">Tiempo - Años</h4>
+                            <input type="number" class="col-md-6" id="inputTiempoCompuesto">
+                        </div>
+
+                        <div class="row">
+                            <h4 class="col-md-6">Frecuencia Anual</h4>
+                            <input type="number" class="col-md-6" id="inputFrecuenciaCompuesto">
+                        </div>
+
+                        <div class="btn-group col-md-12">
+                            <button id="compoundInterest" class="btn btn-outline-secondary m-2" type="button"
+                            onclick="compoundInterest()">Calcular</button>
+                        </div>
+
+                        <div class="row">
+                            <h4>Capital Final:</h4>
+                            <input id="outputCapitalCompuesto" type="number" class="form-control col-md-9" readonly></input>   
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-
-    <script>
-        document.getElementById('convertButtonUSDtoCLP').addEventListener('click', getConversionRateUSDtoCLP);
-        document.getElementById('convertButtonCLPtoUSD').addEventListener('click', getConversionRateCLPtoUSD);
-    </script>
 </body>

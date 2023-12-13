@@ -1,32 +1,23 @@
 function simpleInterest() {
-    var principal = double.Parse(document.getElementById('inputCapitalSimple'));
-    var rate = double.Parse(document.getElementById('inputRateSimple'));
-    var time = double.Parse(document.getElementById('inputTiempoSimple'));
+    var principal = double.Parse(document.getElementById('inputCapitalSimple').value);
+    var rate = double.Parse(document.getElementById('inputRateSimple').value);
+    var time = double.Parse(document.getElementById('inputTiempoSimple').value);
+    var output = double.Parse(document.getElementById('outputCapitalSimple').value);
     let interest = (principal * rate * time) / 100;
-    return interest;
+    output.value = interest;
 }
 
-// Example usage
-let principalAmount = 1000; // Principal amount
-let interestRate = 5; // Interest rate per annum
-let timePeriod = 2; // Time period in years
+function compoundInterest() {
+    var principal = double.Parse(document.getElementById('inputCapitalCompuesto').value);
+    var rate = double.Parse(document.getElementById('inputRateCompuesto').value);
+    var time = double.Parse(document.getElementById('inputTiempoCompuesto').value);
+    var frequency = double.Parse(document.getElementById('inputFrecuenciaCompuesto').value);
+    
+    var output = document.getElementById('outputCapitalCompuesto');
 
-let simpleInterestAmount = simpleInterest(principalAmount, interestRate, timePeriod);
-console.log('Simple Interest:', simpleInterestAmount);
+    let n = frequency;
 
-
-function compoundInterest(principal, rate, time, frequency) {
-    let n = frequency; // Frequency of compounding
     let amount = principal * Math.pow(1 + rate / (n * 100), n * time);
     let interest = amount - principal;
-    return interest;
+    output.value = interest;
 }
-
-// Example usage
-let principalAmountCompound = 1000; // Principal amount
-let interestRateCompound = 5; // Interest rate per annum
-let timePeriodCompound = 2; // Time period in years
-let compoundingFrequency = 1; // Compounding frequency annually
-
-let compoundInterestAmount = compoundInterest(principalAmountCompound, interestRateCompound, timePeriodCompound, compoundingFrequency);
-console.log('Compound Interest:', compoundInterestAmount);
