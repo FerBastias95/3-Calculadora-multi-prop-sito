@@ -1,17 +1,20 @@
 function simpleInterest() {
-    var principal = double.Parse(document.getElementById('inputCapitalSimple').value);
-    var rate = double.Parse(document.getElementById('inputRateSimple').value);
-    var time = double.Parse(document.getElementById('inputTiempoSimple').value);
-    var output = double.Parse(document.getElementById('outputCapitalSimple').value);
+    var output = document.getElementById('outputCapitalSimple');
+
+    var principal = parseFloat(document.getElementById('inputCapitalSimple').value);
+    var rate = parseFloat(document.getElementById('inputRateSimple').value);
+    var time = parseFloat(document.getElementById('inputTiempoSimple').value);
+
     let interest = (principal * rate * time) / 100;
-    output.value = interest;
+
+    output.value = principal + interest;
 }
 
 function compoundInterest() {
-    var principal = double.Parse(document.getElementById('inputCapitalCompuesto').value);
-    var rate = double.Parse(document.getElementById('inputRateCompuesto').value);
-    var time = double.Parse(document.getElementById('inputTiempoCompuesto').value);
-    var frequency = double.Parse(document.getElementById('inputFrecuenciaCompuesto').value);
+    var principal = parseFloat(document.getElementById('inputCapitalCompuesto').value);
+    var rate = parseFloat(document.getElementById('inputRateCompuesto').value);
+    var time = parseFloat(document.getElementById('inputTiempoCompuesto').value);
+    var frequency = parseFloat(document.getElementById('inputFrecuenciaCompuesto').value);
     
     var output = document.getElementById('outputCapitalCompuesto');
 
@@ -19,5 +22,5 @@ function compoundInterest() {
 
     let amount = principal * Math.pow(1 + rate / (n * 100), n * time);
     let interest = amount - principal;
-    output.value = interest;
+    output.value = principal + interest;
 }

@@ -7,11 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-}
-
-html,
-body {
-  background-color: #4994c5;
+  margin-bottom: 0;
 }
 
 .form-holder1 {
@@ -63,7 +59,7 @@ body {
 .form-items-nums {
   border: 3px solid #881ec9;
   padding: 10px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   display: inline-block;
   width: 100%;
   margin-bottom: auto;
@@ -103,7 +99,7 @@ body {
   font-weight: 300;
   line-height: 20px;
   margin-bottom: 30px;
-  padding:5px;
+  padding: 5px;
 }
 
 
@@ -111,13 +107,6 @@ body {
 .was-validated .form-check-input:invalid~.form-check-label,
 .was-validated .form-check-input:valid~.form-check-label {
   color: #fff;
-}
-
-.btn-primary {
-  background-color: #6C757D;
-  outline: none;
-  border: 0px;
-  box-shadow: none;
 }
 
 .btn-primary:hover,
@@ -149,22 +138,219 @@ body {
 
 .flex-container input {
   /* Adjust input styles here */
-  margin-right: 5px; /* Adjust spacing between inputs */
+  margin-right: 5px;
+  /* Adjust spacing between inputs */
 }
 
 .row {
-  margin:10px;
+  margin: 10px;
 }
 
-.navbar{
-  position:fixed;
+.custom-navbar {
+  background-color: #343a40; /* Set your desired background color */
+  color: #ffffff; /* Set your desired text color */
+  padding: 5px 0;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffffff; /* Set your desired text color */
+}
+
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ffffff; /* Set your desired text color */
+  display: none;
+}
+
+.navbar-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links ul li {
+  margin-right: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #ffffff; /* Set your desired text color */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #28a745; /* Set your desired hover color */
+}
+
+/* Included color classes.. 
+	.red 
+	.blue 
+	.yellow 
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+figure.photo {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 80%;
+  max-width: 100%;
+  max-height: 47%;
   width: 100%;
-  top:0;
-  z-index: 100000;
-  padding:15px;
-  
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
 }
 
-.content{
-  margin-top:10%;
+figure.photo * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+figure.photo img {
+  max-width: 100%;
+  position: relative;
+  opacity: 0.4;
+}
+
+figure.photo h2 {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  display: inline-block;
+  background: #000000;
+  -webkit-transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
+  transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
+  padding: 1%;
+  margin: 0;
+  top: 70%;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+figure.photo h2 span {
+  font-weight: 800;
+}
+
+figure.photo:before {
+  height: 100%;
+  width: 100%;
+  content: '';
+  background: #ffffff;
+  position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: rotate(110deg) translateY(-50%);
+  transform: rotate(110deg) translateY(-50%);
+}
+
+figure.photo a {
+  position: absolute;
+  z-index: 1;
+}
+
+figure.photo.blue {
+  background: #123851;
+}
+
+figure.photo.blue h2 {
+  background: #0a212f;
+}
+
+figure.photo.red {
+  background: red;
+}
+
+figure.photo.red h2 {
+  background: #36100c;
+}
+
+figure.photo.green {
+  background: green;
+}
+
+figure.photo.green h2 {
+  background: #103a03;
+}
+
+figure.photo.yellow {
+  background: yellow;
+}
+
+figure.photo.yellow h2 {
+  background: #3e4205;
+}
+
+figure.photo:hover img,
+figure.photo.hover img {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+figure.photo:hover h2,
+figure.photo.hover h2 {
+  -webkit-transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+  transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+}
+
+figure.photo:hover:before,
+figure.photo.hover:before {
+  -webkit-transform: rotate(110deg) translateY(-150%);
+  transform: rotate(110deg) translateY(-150%);
+}
+
+
+body {
+  background-color: #212121;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  padding-left:1%;
+  padding-right: 2%;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  padding-right: 2%;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
