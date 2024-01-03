@@ -196,11 +196,9 @@ body {
   color: #28a745; /* Set your desired hover color */
 }
 
-/* Included color classes.. 
-	.red 
-	.blue 
-	.yellow 
-*/
+* {
+  box-sizing: border-box;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
 figure.photo {
@@ -208,15 +206,15 @@ figure.photo {
   position: relative;
   overflow: hidden;
   margin: 10px;
-  min-width: 80%;
-  max-width: 100%;
-  max-height: 47%;
-  width: 100%;
+  width: 900px;
+  height: 300px;
   background: #000000;
   color: #ffffff;
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   border-radius: 50px;
+  margin: 0;
+  padding: 0;
 }
 
 figure.photo * {
@@ -300,6 +298,14 @@ figure.photo.yellow h2 {
   background: #3e4205;
 }
 
+figure.photo.orange {
+  background: orange;
+}
+
+figure.photo.orange h2 {
+  background: rgb(66, 43, 1);
+}
+
 figure.photo:hover img,
 figure.photo.hover img {
   opacity: 1;
@@ -324,33 +330,15 @@ body {
   background-color: #212121;
 }
 
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Control the left side */
-.left {
-  left: 0;
-  padding-left:1%;
-  padding-right: 2%;
-}
-
-/* Control the right side */
-.right {
-  right: 0;
-  padding-right: 2%;
-}
-
-/* If you want the content centered horizontally and vertically */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
