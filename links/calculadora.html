@@ -1,9 +1,11 @@
 <head>
-    <title>Promedio Ponderado</title>
+    <title> Calculadora</title>
     <script src="../script/calculator.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/calculadora.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
@@ -14,7 +16,6 @@
 </head>
 
 <body>
-    
     <header>
         <nav class="custom-navbar">
             <div class="container">
@@ -28,54 +29,67 @@
                         <li><a href="conversion_peso.html">Conversion Peso</a></li>
                         <li><a href="promedio_ponderado.html">Promedio Ponderado</a></li>
                         <li><a href="intereses.html">Interés Compuesto</a></li>
+                        <li><a href="iva.html">Calcular IVA</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="content">
-        <div class="form-body">
-            <div class="form-holder1">
-                <div class="form-content">
-                    <div class="form-items">
-                        <h1>Calculadora</h1>
-                        <div class="calc-input">
-                            <div class="form-items-nums col-md-6 m-2">
-                                <h3>Estos son sus números</h3>
+    <h1 class="col-md-6 mx-auto p-0">CALCULADORA</h1>
+    <div class="row">
+        <div class="col-md-6 mx-auto p-0">
+            <div class="login-box">
+                <div class="login-snip">
+                    <div class="login-space">
+                        <div class="login">
+                            <div class="group">
+                                <h3 class="label">Sus números:</h3>
                                 <div id="inputBoxes"></div>
-                                <div class="btn-group mt-2 mb-2" role="group">
-                                    <button class="btn btn-success" type="button" onclick="addInputBox()">Agregar
-                                        número</button>
-                                    <button class="btn btn-danger" type="button" onclick="removeInputBox()">Borrar
-                                        número</button>
+                            </div>
+                            <div class="group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="submit" class="button" value="Agregar Número"
+                                            onclick="addInputBox()">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="submit" class="button" value="Eliminar Número"
+                                            onclick="removeInputBox()">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="operadores d-flex justify-content-left m-3">
-                                <input id="display" class="form-control col-md-3 " readonly placeholder="Operador"></input>
-                                <div class="btn-group ml-3">
-                                    <button class="btn btn-success" type="button" onclick="addToDisplay('+')">+</button>
-                                    <button class="btn btn-info" type="button" onclick="addToDisplay('-')">-</button>
-                                    <button class="btn btn-danger" type="button" onclick="addToDisplay('*')">*</button>
-                                    <button class="btn btn-warning" type="button" onclick="addToDisplay('/')">/</button>
-                                    <button class="btn btn-secondary" type="button" onclick="addToDisplay('Promedio')">Promedio</button>
+                            <div class="group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input id="display" readonly placeholder="Operación" class="input2">
+                                    </div>
+                                    <div class="col-md-6 pt-2">
+                                        <button class="btn btn-success" type="button"
+                                            onclick="addToDisplay('+')">+</button>
+                                        <button class="btn btn-info" type="button"
+                                            onclick="addToDisplay('-')">-</button>
+                                        <button class="btn btn-danger" type="button"
+                                            onclick="addToDisplay('*')">*</button>
+                                        <button class="btn btn-warning" type="button"
+                                            onclick="addToDisplay('/')">/</button>
+                                        <button class="btn btn-secondary" type="button"
+                                            onclick="addToDisplay('Promedio')">Promedio</button>
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <div class="resultados d-flex justify-content-center m-2">
-                                <div class="btn-group" role="group">
-                                    <button class="btn btn-outline-secondary" type="button"
-                                        onclick="calculateResult()">Calcular</button>
-                                </div>
+
                             </div>
 
-                                
-                            <div class="calc-output">
-                                <input id="output" class="form-control m-2" rows="1" cols="70" readonly
-                                    placeholder="Resultado"></input>
+                            <div class="group">
+                                <input type="submit" class="button" value="Calcular"
+                                            onclick="calculateResult()">
                             </div>
-                            
+
+                            <div class="group">
+                                <h3>Resultado:</h3>
+                                <input id="output" readonly class="resultado">
+                            </div>
                         </div>
                     </div>
                 </div>

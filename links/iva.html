@@ -1,17 +1,13 @@
 <head>
     <title>Promedio Ponderado</title>
-    <script src="../script/promedio_ponderado.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <link rel="stylesheet" type="text/css" href="../css/promedio.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-    </script>
+    <link rel="stylesheet" type="text/css" href="../css/iva.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -34,42 +30,56 @@
             </div>
         </nav>
     </header>
+
     <div class="row">
         <div class="col-md-6 mx-auto p-0">
             <div class="login-box">
                 <div class="login-snip">
                     <div class="login-space">
                         <div class="calc-input">
-                            <div id="inputBoxes">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h3>Notas</h3>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h3>Ponderaciones</h3>
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Valor IVA</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <input id="valorIVA" class="input" value="19">
                                 </div>
                             </div>
-
+                            <table class="grid-container">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h6>Nombre</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Valor Original</h6>
+                                        </th>
+                                        <th>
+                                            <h6>Valor Final</h6>
+                                        </th>
+                                        <th>
+                                            <h6></h6>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="inputBoxes">
+                                    
+                                </tbody>
+                            </table>
                             <div class="btn-group" role="group">
                                 <div class="buttonRow">
                                     <button class="btn btn-success rounded mb-2 mt-2 m-2" type="button"
-                                        onclick="addInputBoxes()">Agregar nota</button>
-                                </div>
-                                <div class="buttonRow">
-                                    <button class="btn btn-danger rounded mb-2 mt-2" type="button"
-                                        onclick="removeInputBoxes()">Borrar nota</button>
+                                        onclick="addInputBoxes()">Agregar producto</button>
                                 </div>
                             </div>
                             <div class="group">
-                                <h3>Resultado:</h3>
+                                <h3>Valor Final:</h3>
                                 <input id="output" readonly class="resultado">
                             </div>
 
 
                             <div class="group">
-                                <input type="submit" class="button" value="Calcular Promedio"
-                                    onclick="calculateResult()">
+                                <input type="submit" class="button" value="Calcular Total" onclick="calculateSum()">
                             </div>
                         </div>
                     </div>
@@ -77,6 +87,5 @@
             </div>
         </div>
     </div>
-
-
+    <script src="../script/iva.js"></script>
 </body>
